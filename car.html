@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="car.css">
+    <title>HTML and CSS Car</title>
+    <style>
+        .car{
+            position:relative;
+            animation:mymove 5s linear infinite;
+        }
+        @keyframes mymove{
+            from{left:0px;}
+            to{left: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div class="car">
+        <div class="body">
+            <div class="roof"></div>
+            <div class="window">
+                <div class="window-left"></div>
+                <div class="window-right"></div>
+            </div>
+        </div>
+        <div class="wheels">
+            <div class="wheel"></div>
+            <div class="wheel"></div>
+        </div>
+    </div>
+</body>
+</html>

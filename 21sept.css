@@ -1,0 +1,20 @@
+.item1{
+    float : right;
+    border : 2px solid black;
+    /* height: 50px;
+    width: 45%; */
+}
+.item2{
+    float : left;
+    border : 2px solid black;
+    /* height: 50px;
+    width:50%; */
+}
+.item3{
+    /* float : left; */
+    border : 2px solid black;
+    /* height: 50px;
+    width:50px; */
+}
+
+

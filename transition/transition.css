@@ -1,0 +1,20 @@
+div{
+    height: 200px;
+    width: 200px;
+    border : 2px solid black;
+    overflow: hidden;
+    /* position: relative; */
+    /* transition-timing-function: ease-out; */
+    
+}
+.box1{
+    background-image: url("nature.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition-property: all;
+    transition-duration: 2s;
+
+}
+.box1:hover{
+    transform: scale(1.2);
+}

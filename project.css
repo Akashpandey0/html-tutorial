@@ -1,0 +1,29 @@
+*{
+    margin : 0px;
+    padding: 0px;
+}
+.navbar{
+    height: 100px;
+    background-color: #0f0f0f;
+    padding-top:20px;
+}
+a{
+    margin-right: 200px;
+    color: white;
+   
+}
+.logo{
+    font-size: 30px;
+    color: #ffa600e2;
+}
+button{
+    background-color: #ffa600e2;
+    width: 60px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+input[type=search]{
+    border: 1px solid white;
+    border-radius : 5px;
+    
+}
