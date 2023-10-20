@@ -25,5 +25,6 @@ public class snake
             }
             System.out.println();
         }
+        sc.close();
     }
 }
