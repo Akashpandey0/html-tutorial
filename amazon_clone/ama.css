@@ -63,7 +63,7 @@
     border: none;
  }
  .select-search:hover{
-    background-color: gray;
+    background-color: lightgray;
  }
  input{
 width: 100%;
