@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon registration</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="register_logo">
+        <a href="ama.html">   
+            <div class="logo"></div>
+        </a>
+    </div>
+    <div class="form">
+        <h2>Register to Amazon</h2>
+        <div class="from_box">
+
+            <form action="">
+                <input type="text" placeholder=" username"id="username"name="username">
+            <label for="username"><i class="fa-solid fa-user"></i></label>
+            <input type="email" name="email" id="email" required placeholder="email">
+            <label for="email"><i class="fa-solid fa-envelope"></i></label>
+            <input type="password" class="password" id="password" required placeholder="password">
+            <label for="password"class="password">
+                <i class="fa-solid fa-lock"></i>
+                <!-- <i class="fa-regular fa-eye"></i> -->
+            </label>
+        <input type="password" class="password" id="confirm_pass" required placeholder="confirm" >
+        <label for="confirm_pass"><i class="fa-regular fa-circle-check" class="check"></i></label>
+        <br>
+        <input type="checkbox"  id="show" onclick="myFunction()" >Show Password
+        <input type="submit" style="cursor: pointer;" class="btn">
+    </form>
+</div>
+<!-- <div class="from_box">
+
+    <form action="">
+        <input type="text" placeholder=" username"id="username"name="username">
+    <label for="username"><i class="fa-solid fa-user"></i></label>
+    <input type="email" name="email" id="email" required placeholder="email">
+    <label for="email"><i class="fa-solid fa-envelope"></i></label>
+    <input type="password" class="password" id="password" required placeholder="password">
+    <label for="password"class="password">
+        <i class="fa-solid fa-lock"></i>
+         <i class="fa-regular fa-eye"></i>
+    </label>
+<input type="password" class="password" id="confirm_pass" required placeholder="confirm" >
+<label for="confirm_pass"><i class="fa-regular fa-circle-check" class="check"></i></label>
+<br>
+<input type="checkbox"  id="show" onclick="myFunction()" >Show Password
+<input type="submit" style="cursor: pointer;" class="btn">
+</form>
+</div> -->
+</div>
+<script>
+    function myFunction() {
+        var x = document.getElementById("password" );
+        var y =document.getElementById("confirm_pass")
+        if(x.type === "password" || y.type === "password")
+        {
+            x.type = "text";
+            y.type = "text";
+        }
+        else{
+            y.type = "password";
+            x.type = "password";
+        }}
+
+        
+</script>
+</body>
+</html>
