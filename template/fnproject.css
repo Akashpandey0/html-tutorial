@@ -4,6 +4,9 @@
     font-family: 'Times New Roman', Times, serif;
     border: border-box;
 }
+body{
+    width: 100%;
+}
 .navbar{
     height: 30px;
     width: 100%;
