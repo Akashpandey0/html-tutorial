@@ -1,143 +1,113 @@
 *{
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    border: border-box;
+    margin: 0%;
+    padding: 0%;
 }
-.navbar{
-    height: 60px;
-    background-color: #0f1111;
-    color: white;
+body{
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+#header{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 20px 80px;
+    background: linear-gradient(45deg,white,rgb(110, 161, 238));
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.06);
+    z-index: 999;
 }
-.nav_logo{
-    height: 50px;
-    width: 100px;
-}
+
 .logo{
-    background-image: url("amazon-logo.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 50px;
-    width: 100%;
-}
-.border{
-    border: 2px solid transparent
-}
-.border:hover{
-    border: 2px solid white;
-}
-/* box2 */
-
-.deliver{
-    color: #cccccc;
-    font-size: 0.85rem;
-    margin-left: 20px;
-}
-.country{
-    font-size: 1rem;
-    margin-left: 20px;
-}
-.add-icon{
-    display: flex;
-    align-items: center;
-
-}
- /* box3 */
- .nav-search{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: pink;
-    width: 620px;
-    height: 40px;
-    border-radius: 4px;
- }
- .select-search{
-    background-color: #f3f3f3;
-    width: 50px;
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;
- }
- .select-search:hover{
-    background-color: lightgray;
- }
- input{
-width: 100%;
-font-size: 1rem;
-border: none;
-
- }
- .search-icon{
-    width: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    background-color: #fabb68;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    color: black; 
- }
- .search-icon:hover{
-    background-color: coral;
- }
- /* box4 */
- .language{
-    display: flex;
-    width: 120px;
-    height: 30px;
-    /* border-radius: 4px; */
- }
- 
- .select-lang{
-    background-color: #0f1111;
-    width: 80px;
-    text-align: center;
-    color: #f3f3f3;
-    font-size: 0.89rem;
-    font-weight:700;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;
-    margin-left: 2px;
- }
- .flag{
-    height: 30px;
-    width: 30px;
-    background-image: url("india-flag.png");
-    background-size:contain ;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-
- }
- a{
-    color: #f3f3f3;
+    color: black;
     text-decoration: none;
- }
- 
- span{
-    font-size: 12px;
+}
+#navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+#navbar li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
 
- }
- .nav-second{
-    font-size: 14px;
-    font-weight: 500;
- }
- /* box6 */
- .nav-cart i{
-    font-size: 30px;
- }
- .nav-cart{
-    font-size: 0.8rem;
-    font-weight: 500;
- }
+#navbar li:hover{
+    transform:translate3d(5px,-5px,5px);
+    box-shadow: 0 5px 15px;
+}
+#navbar li a:hover,
+#navbar li a.active{
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: '';
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}#mobile{
+    display: none;
+    align-items: center;
+}#close{
+    display: none;
+}
+@media(max-width: 799px) {
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.5s ease-in-out;
+
+    }
+    #navbar.active{
+        right: 0px;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        color: black;
+        padding-left: 20px;
+    }
+    #close
+    {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        font-size: 24px;
+        color: black;
+    }
+    .bag{
+        display: none;
+    }
+}
  
  /* panel */
  .panel{
@@ -167,7 +137,7 @@ border: none;
  .hero-section{
     height: 400px;
 
-    background-image: url("box5.jpg");
+    background-image: url("https://images-eu.ssl-images-amazon.com/images/W/MEDIAX_792452-T1/images/G/31/img2020/img21/apparelGW/dec23atf/unrec/mfd/WA_ETH_3000._CB571190800_.jpg");
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -286,16 +256,4 @@ ul a{
 }
 .copyright{
     padding-top: 5px;
-    font-size: .7rem;
-}
-
-/* start media query */
-
-@media (max-width:400px) {
-    .panel {
-        height: 40px;
-        background-color: #222f3d;
-        color: white;
-        
-    }
-}
+    font-size: .7rem;}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+</head>
+<style>
+    *{
+        background-color: darkmagenta;
+    }
+    .container{
+        width: 100vw;
+        height: 100vh;
+        /* background-color:violet; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20rem;
+    }
+    .two-button{
+        margin-top: 3rem;
+    }
+    button{
+        border: none;
+        background-color: red;
+        color: aliceblue;
+        padding: 3rem 3rem;
+        border-radius: 50%;
+    }
+    .cart{
+        margin-top: 5rem;
+    }
+    .listOfItems{
+        /* list-style: none; */
+    }
+    li{
+        margin: 1rem;
+        text-decoration: none;
+        list-style: none;
+    }
+
+</style>
+<body>
+
+    <div class="totalItem">
+        <h1>Total Items: <span id="totalItem">0</span></h1>
+    </div>
+    <div class="container">
+        <div class="two-button">
+            <button onclick="reset()">Reset</button>
+            <button onclick="addToCart()">Add</button>
+        </div>
+        <div class="cart">
+            <ul id="listOfItems">
+            </ul>
+        </div>
+    </div>
+   
+<script>
+
+    // adding the item to the cart
+    // total number of items in the cart
+
+     
+
+
+    cartItems = [];
+    function addToCart(){
+        console.log("execute")
+        let listOfItems = document.getElementById("listOfItems")
+        listOfItems.innerHTML += `
+            <li id=${cartItems.length}>0
+                <button onclick="increase(${cartItems.length})">+</button>
+                <button onclick="decrease(${cartItems.length})">-</button>
+                <button onclick="deleteItem(${cartItems.length})">delete</button>
+            </li>
+        `;
+
+        
+        cartItems.push(listOfItems.innerHTML)
+
+        console.log(cartItems)
+    }
+
+    // incresing the value of the item like zero to 1 or 2 or 3
+
+    function increase(id){
+        let item = document.getElementById(id)
+        let itemValue = item.innerText
+        let value = parseInt(itemValue)
+
+        value = value + 1
+        item.innerHTML = `
+            ${value}
+            <button onclick="increase(${id})">+</button>
+            <button onclick="decrease(${id})">-</button>
+            <button onclick="deleteItem(${id})">delete</button>
+        `
+        totalItem()
+    }
+
+    
+
+    function decrease(id){
+        let item = document.getElementById(id)
+        let itemValue = item.innerText
+        let value = parseInt(itemValue)
+
+        if(value > 0){
+            value = value - 1
+            item.innerHTML = `
+                ${value}
+                <button onclick="increase(${id})">+</button>
+                <button onclick="decrease(${id})">-</button>
+                <button onclick="deleteItem(${id})">delete</button>
+            `
+        }
+
+        totalItem()
+    }
+
+    function deleteItem(id){
+        let item = document.getElementById(id)
+        item.remove()
+    }
+
+    function reset(){
+        let listOfItems = document.getElementById("listOfItems")
+        let totalItem = document.getElementById("totalItem")
+totalItem.innerText = 0
+        listOfItems.innerHTML = ""
+    }
+
+    function totalItem(){
+        let totalItem = document.getElementById("totalItem")
+
+        let total = 0
+        for(let i = 0; i < cartItems.length; i++){
+            let item = document.getElementById(i)
+            let itemValue = item.innerText
+            let value = parseInt(itemValue)
+            total = total + value
+        }
+        totalItem.innerText = total
+    }
+</script>
+</body>
+</html>

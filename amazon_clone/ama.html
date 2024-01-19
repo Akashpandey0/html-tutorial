@@ -8,53 +8,26 @@
     <link rel="stylesheet" href="ama.css">
 </head>
 <body>
-      <header>  
-        <div class="navbar">
-            <div class="nav_logo border">
-                <div class="logo"></div>
+    <div class="container">
+        <section id="header">
+            <a href="index.html" class="logo">
+                <h2 >Amazon</h2>
+            </a>
+            <div class="nav">
+                <ul id="navbar">
+                    <li><a class="active" href="men.html">Men</a></li>
+                    <li><a href="women.html">Women</a></li><li><a href="#slider">Trends</a></li><li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="login.html">login</a></li>
+                    <li><a href="cart.html" class="bag"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                    <a href="#" id="close" onclick="myfunc1()"><i class="fa-solid fa-xmark"></i></a>
+                </ul>
             </div>
-            <div class="nav-address border">
-                <p class="deliver">Deliver to</p>
-                <div class="add-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <p class="country">India</p>
+            <div id="mobile">
+                <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+                <i id = "bar"class="fa-solid fa-bars" style="cursor: pointer;" onclick="myfunc()"></i>
             </div>
-            <div class="nav-search border">
-                <select class="select-search">
-                    <option>All</option>
-                    <option value="beauty products"><a href="#">cosmetics</a></option>
-                    <option value="phones"><a href="#">mobiles and gadgets</a></option>
-                    <option value="clothes"><a href="#">clothng and accessories</a></option>
-                    <option value="computer and accessories"><a href="#">computer and accessories</a></option>
-                </select>
-                <input placeholder="search Amazon" class="input">
-                <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
-            <!-- box4 -->
-            <div class="language border">
-                <div class="flag"></div>
-                <select class="select-lang">
-                    <option value="EN" >english</option>
-                    <option value="HI">hindi</option>
-                    <option value="MR">marathi</option>
-                </select>
-            </div>
-            <div class="nav-signin border">
-                <p><span>Hello, <a href="login.html">sign in</a></span></p>
-                <p class="nav-second">Account & Lists</p>
-            </div>
-            <div class="return border">
-                <p><span>Return</span></p>
-                <p class="nav-second">& Orders</p>
-            </div>
-            <div class="nav-cart border">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    Cart
-            </div>
-        </div>
+        </section>
 <!-- panel -->
         <div class="panel ">
             <div class="panel-all">
@@ -108,28 +81,28 @@
         <div class="box2 box" >
             <div class="box-content">
                 <h2>Makeup product</h2>
-            <div class="box-img" style="background-image: url('box1.jpg');"></div>
+            <div class="box-img" style="background-image: url('https://m.media-amazon.com/images/W/MEDIAX_792452-T1/images/I/41vncBS0yjL._AC_UL480_FMwebp_QL65_.jpg');"></div>
             <p>see more</p>
             </div>
         </div>
         <div class="box3 box">
             <div class="box-content">
                 <h2>coffee product</h2>
-            <div class="box-img" style="background-image: url('box4.jpg');"></div>
+            <div class="box-img" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/W/MEDIAX_792452-T1/images/G/31/img22/AmazonBrands/Bikram/Bikram1/Kitchen_PC_QC_186_3._SY116_CB570512815_.jpg');"></div>
             <p>see more</p>
             </div>
         </div>
         <div class="box4 box">
             <div class="box-content">
                 <h2>watches</h2>
-            <div class="box-img" style="background-image: url('box2.jpg');"></div>
+            <div class="box-img" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/W/MEDIAX_792452-T1/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-3-186-116._SY116_CB636110853_.jpg');"></div>
             <p>see more</p>
             </div>
         </div>
         <div class="box5 box">
             <div class="box-content">
                 <h2>bluetooth earphone</h2>
-            <div class="box-img" style="background-image: url('box3.jpg');"></div>
+            <div class="box-img" style="background-image: url('https://images-eu.ssl-images-amazon.com/images/W/MEDIAX_792452-T1/images/G/31/img21/MSO/CE/Unrec1/Boat_Desktop_Qc_1x._SY116_CB577919562_.jpg');"></div>
             <p>see more</p>
             </div>
         </div>
@@ -187,5 +160,6 @@
             </div>
         </div>
       </footer>
+      <script src="ama.js"></script>
 </body>
 </html>
